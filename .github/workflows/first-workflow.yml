@@ -12,6 +12,10 @@ jobs:
     steps:
       - run: echo "Hello, world!"
 
+      - name: Print secret
+        run: |
+          echo ${{ secrets.SECRET }}
+
       - name: Checkout code
         uses: actions/checkout@v4
 
